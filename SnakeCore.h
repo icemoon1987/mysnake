@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  SnakeCore.h
 //  Implementation of the Class SnakeCore
-//  Created on:      05-十月-2013 11:16:09
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_9CEA4FEE_0B20_4b1f_9B43_CF089F565544__INCLUDED_)
-#define EA_9CEA4FEE_0B20_4b1f_9B43_CF089F565544__INCLUDED_
+#if !defined(EA_618919C1_2783_4492_8804_B37217CCE0C0__INCLUDED_)
+#define EA_618919C1_2783_4492_8804_B37217CCE0C0__INCLUDED_
 
 #include "SnakeNode.h"
 #include "SnakeDisplayAdapter.h"
@@ -23,7 +23,6 @@ public:
 	SnakeDisplayAdapter *m_SnakeDisplayAdapter;
 	ConfigFileExtractor *m_ConfigFileExtractor;
 	SnakeControlAdapter *m_SnakeControlAdapter;
-	SnakeNode *m_SnakeNode;
 	SnakeState *m_SnakeState;
 
 	void GameInit();
@@ -39,6 +38,9 @@ private:
 	SnakeState* m_state;
 	SnakeNode m_nodesvector;
 	bool m_isPause;
+	SnakeNode m_nodesvector;
+	SnakeNode m_nodesvector;
+	SnakeNode m_nodesvector;
 
 };
-#endif // !defined(EA_9CEA4FEE_0B20_4b1f_9B43_CF089F565544__INCLUDED_)
+#endif // !defined(EA_618919C1_2783_4492_8804_B37217CCE0C0__INCLUDED_)

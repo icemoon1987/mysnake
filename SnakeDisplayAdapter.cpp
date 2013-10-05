@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  SnakeDisplayAdapter.cpp
 //  Implementation of the Class SnakeDisplayAdapter
-//  Created on:      05-十月-2013 11:16:09
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 

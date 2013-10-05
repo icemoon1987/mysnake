@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  OverState.h
 //  Implementation of the Class OverState
-//  Created on:      05-十月-2013 11:16:08
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_5B0B5801_DEC0_4acd_B7C2_67461F60C7B2__INCLUDED_)
-#define EA_5B0B5801_DEC0_4acd_B7C2_67461F60C7B2__INCLUDED_
+#if !defined(EA_A54C8819_D0BD_46ca_A7DB_2A135867C269__INCLUDED_)
+#define EA_A54C8819_D0BD_46ca_A7DB_2A135867C269__INCLUDED_
 
 #include "SnakeState.h"
 
@@ -23,4 +23,4 @@ private:
 	SnakeCore& m_snake;
 
 };
-#endif // !defined(EA_5B0B5801_DEC0_4acd_B7C2_67461F60C7B2__INCLUDED_)
+#endif // !defined(EA_A54C8819_D0BD_46ca_A7DB_2A135867C269__INCLUDED_)

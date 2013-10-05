@@ -1,19 +1,8 @@
 ///////////////////////////////////////////////////////////
 //  SnakeNode.cpp
 //  Implementation of the Class SnakeNode
-//  Created on:      05-十月-2013 11:16:10
+//  Created on:      05-十月-2013 18:14:19
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
 #include "SnakeNode.h"
-
-
-SnakeNode::SnakeNode(){
-
-}
-
-
-
-SnakeNode::~SnakeNode(){
-
-}

@@ -1,14 +1,13 @@
 ///////////////////////////////////////////////////////////
 //  SnakeControlAdapter.h
 //  Implementation of the Class SnakeControlAdapter
-//  Created on:      05-十月-2013 11:16:08
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E075C4F7_E6B8_42b9_B802_B1162C59F339__INCLUDED_)
-#define EA_E075C4F7_E6B8_42b9_B802_B1162C59F339__INCLUDED_
+#if !defined(EA_568F4888_2EC6_4a50_A052_590631DEC8B9__INCLUDED_)
+#define EA_568F4888_2EC6_4a50_A052_590631DEC8B9__INCLUDED_
 
-#include "SnakeCmd.h"
 #include "ControlInterface.h"
 
 /**
@@ -20,7 +19,6 @@ class SnakeControlAdapter
 public:
 	SnakeControlAdapter();
 	virtual ~SnakeControlAdapter();
-	SnakeCmd *m_SnakeCmd;
 	ControlInterface *m_ControlInterface;
 
 	int GetCommand();
@@ -32,4 +30,4 @@ private:
 	ControlInterface& m_ctrlIf;
 
 };
-#endif // !defined(EA_E075C4F7_E6B8_42b9_B802_B1162C59F339__INCLUDED_)
+#endif // !defined(EA_568F4888_2EC6_4a50_A052_590631DEC8B9__INCLUDED_)

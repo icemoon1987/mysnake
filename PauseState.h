@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  PauseState.h
 //  Implementation of the Class PauseState
-//  Created on:      05-十月-2013 11:16:08
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_200EB114_CC89_4c2c_BD3D_6D25A282A6F0__INCLUDED_)
-#define EA_200EB114_CC89_4c2c_BD3D_6D25A282A6F0__INCLUDED_
+#if !defined(EA_54E508C6_99D0_4ef0_950A_DAB868268692__INCLUDED_)
+#define EA_54E508C6_99D0_4ef0_950A_DAB868268692__INCLUDED_
 
 #include "SnakeState.h"
 
@@ -23,4 +23,4 @@ private:
 	SnakeCore& m_snake;
 
 };
-#endif // !defined(EA_200EB114_CC89_4c2c_BD3D_6D25A282A6F0__INCLUDED_)
+#endif // !defined(EA_54E508C6_99D0_4ef0_950A_DAB868268692__INCLUDED_)

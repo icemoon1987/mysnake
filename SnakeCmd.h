@@ -1,14 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  SnakeCmd.h
 //  Implementation of the Class SnakeCmd
-//  Created on:      05-十月-2013 11:16:08
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_CD93E1C3_3771_4139_BF18_DFB55F84048C__INCLUDED_)
-#define EA_CD93E1C3_3771_4139_BF18_DFB55F84048C__INCLUDED_
-
-#include "SnakeCore.h"
+#if !defined(EA_22F14578_90D2_47d4_B86F_CBF98A697248__INCLUDED_)
+#define EA_22F14578_90D2_47d4_B86F_CBF98A697248__INCLUDED_
 
 /**
  * Commands for Snake
@@ -20,7 +18,6 @@ enum SnakeCmd
 	CMD_DOWN,
 	CMD_RIGHT,
 	CMD_LEFT,
-	CMD_PAUSE,
-	SnakeCore *m_SnakeCore;
+	CMD_PAUSE
 };
-#endif // !defined(EA_CD93E1C3_3771_4139_BF18_DFB55F84048C__INCLUDED_)
+#endif // !defined(EA_22F14578_90D2_47d4_B86F_CBF98A697248__INCLUDED_)

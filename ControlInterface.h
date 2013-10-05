@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  ControlInterface.h
 //  Implementation of the Class ControlInterface
-//  Created on:      05-十月-2013 11:16:06
+//  Created on:      05-十月-2013 18:14:17
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_E077BE33_6976_4257_B1CA_81009CC384C1__INCLUDED_)
-#define EA_E077BE33_6976_4257_B1CA_81009CC384C1__INCLUDED_
+#if !defined(EA_08EC2450_C64F_4a4e_A6A9_94A046AC05D4__INCLUDED_)
+#define EA_08EC2450_C64F_4a4e_A6A9_94A046AC05D4__INCLUDED_
 
 class ControlInterface
 {
@@ -15,7 +15,7 @@ public:
 	ControlInterface();
 	virtual ~ControlInterface();
 
-	void GetKey();
+	virtual int GetKey() =0;
 
 };
-#endif // !defined(EA_E077BE33_6976_4257_B1CA_81009CC384C1__INCLUDED_)
+#endif // !defined(EA_08EC2450_C64F_4a4e_A6A9_94A046AC05D4__INCLUDED_)

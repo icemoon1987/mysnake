@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  PlayState.h
 //  Implementation of the Class PlayState
-//  Created on:      05-十月-2013 11:16:08
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_858264BF_A686_4329_B9A2_89CF0D15DC70__INCLUDED_)
-#define EA_858264BF_A686_4329_B9A2_89CF0D15DC70__INCLUDED_
+#if !defined(EA_3210C2DA_A61A_49ed_9456_93797D5DC138__INCLUDED_)
+#define EA_3210C2DA_A61A_49ed_9456_93797D5DC138__INCLUDED_
 
 #include "SnakeState.h"
 
@@ -26,4 +26,4 @@ private:
 	SnakeCore& m_snake;
 
 };
-#endif // !defined(EA_858264BF_A686_4329_B9A2_89CF0D15DC70__INCLUDED_)
+#endif // !defined(EA_3210C2DA_A61A_49ed_9456_93797D5DC138__INCLUDED_)

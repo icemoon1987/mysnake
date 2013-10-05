@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  DisplayModule.cpp
 //  Implementation of the Class DisplayModule
-//  Created on:      05-十月-2013 11:16:07
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 

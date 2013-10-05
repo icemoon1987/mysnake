@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  SnakeDisplayAdapter.h
 //  Implementation of the Class SnakeDisplayAdapter
-//  Created on:      05-十月-2013 11:16:09
+//  Created on:      05-十月-2013 18:14:18
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0D6B821A_4D2B_4142_9B09_7BC5EF5D1FDF__INCLUDED_)
-#define EA_0D6B821A_4D2B_4142_9B09_7BC5EF5D1FDF__INCLUDED_
+#if !defined(EA_4F66675F_78B6_486a_B3CF_931526681DAA__INCLUDED_)
+#define EA_4F66675F_78B6_486a_B3CF_931526681DAA__INCLUDED_
 
 #include "DisplayInterface.h"
 
@@ -34,4 +34,4 @@ private:
 	char* m_dispBuf;
 
 };
-#endif // !defined(EA_0D6B821A_4D2B_4142_9B09_7BC5EF5D1FDF__INCLUDED_)
+#endif // !defined(EA_4F66675F_78B6_486a_B3CF_931526681DAA__INCLUDED_)

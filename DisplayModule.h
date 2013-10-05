@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  DisplayModule.h
 //  Implementation of the Class DisplayModule
-//  Created on:      05-十月-2013 11:16:07
+//  Created on:      05-十月-2013 18:14:17
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_077AE6DA_71C4_4403_8019_ED389566B3DC__INCLUDED_)
-#define EA_077AE6DA_71C4_4403_8019_ED389566B3DC__INCLUDED_
+#if !defined(EA_54394FEF_547B_4d9c_9B44_097D286EF3F6__INCLUDED_)
+#define EA_54394FEF_547B_4d9c_9B44_097D286EF3F6__INCLUDED_
 
 #include "DisplayInterface.h"
 
@@ -26,4 +26,4 @@ private:
 	int m_rowLen;
 
 };
-#endif // !defined(EA_077AE6DA_71C4_4403_8019_ED389566B3DC__INCLUDED_)
+#endif // !defined(EA_54394FEF_547B_4d9c_9B44_097D286EF3F6__INCLUDED_)

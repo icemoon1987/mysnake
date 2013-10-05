@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  ControlInterface.cpp
 //  Implementation of the Class ControlInterface
-//  Created on:      05-十月-2013 11:16:06
+//  Created on:      05-十月-2013 18:14:17
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
@@ -15,16 +15,5 @@ ControlInterface::ControlInterface(){
 
 
 ControlInterface::~ControlInterface(){
-
-}
-
-
-
-
-
-/**
- * Get the pressed key
- */
-void ControlInterface::GetKey(){
 
 }

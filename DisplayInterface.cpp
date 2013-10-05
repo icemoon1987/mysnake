@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 //  DisplayInterface.cpp
 //  Implementation of the Class DisplayInterface
-//  Created on:      05-十月-2013 11:16:07
+//  Created on:      05-十月-2013 18:14:17
 //  Original author: icemoon
 ///////////////////////////////////////////////////////////
 
@@ -15,25 +15,5 @@ DisplayInterface::DisplayInterface(){
 
 
 DisplayInterface::~DisplayInterface(){
-
-}
-
-
-
-
-
-/**
- * Get the pointer of display buffer
- */
-char* DisplayInterface::GetDispBuf(){
-
-	return  NULL;
-}
-
-
-/**
- * Set the pointer of the display buffer
- */
-void DisplayInterface::SetDispBuf(const char* dispBuf){
 
 }
