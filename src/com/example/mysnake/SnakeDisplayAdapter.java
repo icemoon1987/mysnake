@@ -10,15 +10,9 @@ public class SnakeDisplayAdapter implements DisplayInterface{
 	}
 
 	@Override
-	public char[] GetDispBuf() {
+	public char[][] GetDispBuf() {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public void SetDispBuf(char[] disp) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override

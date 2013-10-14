@@ -18,7 +18,35 @@ public class MainActivity extends Activity {
         m_dispModule = (DisplayModule)this.findViewById(R.id.DisplayModule);
         m_snakeCore = new SnakeCore(m_dispModule);
         m_ctrlModule = new ControlModule(this, m_snakeCore);
+        
+        
+        m_dispModule.InitDispBuffer(20, 20);
+        char[][] p = m_dispModule.GetDispBuf();
+        
+        
+        for(int i = 0 ; i < 20 ; ++i)
+        {
+        	for(int j = 0 ; j < 20 ; ++j)
+        	{
+        		p[i][j] = 0;
+        	}
+        }
+        
+        p[1][1] = 1;
+        p[2][2] = 2;
+        p[3][3] = 3;
+        p[15][10] = 1;
+        p[19][19] = 2;
                 
+        while(true)
+        {
+        	try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        }
     }
 
 
