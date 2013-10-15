@@ -31,9 +31,19 @@ public class DisplayModule extends View implements DisplayInterface {
 	{
 		m_row = j;
 		m_col = i;
-		m_dispBuf = new char[i][j];
+		
+		if(m_dispBuf == null)
+		{
+			m_dispBuf = new char[i][j];
+		}
+		else
+		{
+			
+		}
+		
 		m_blockLen = this.getHeight() / j;
-		m_rightBorder = this.getWidth() - m_blockLen * i;
+		m_rightBorder = m_blockLen * i;
+		
 	}
 
 	
@@ -94,9 +104,9 @@ public class DisplayModule extends View implements DisplayInterface {
 	{
 		m_paint.setColor(Color.BLACK);
 		canvas.drawLine(0, 0, m_rightBorder, 0, m_paint);
-		canvas.drawLine(m_rightBorder, 0, m_rightBorder, this.getHeight(), m_paint);
-		canvas.drawLine(m_rightBorder, this.getHeight(), 0, this.getHeight(), m_paint);
-		canvas.drawLine(0, this.getHeight(), 0, 0, m_paint);
+		canvas.drawLine(m_rightBorder, 0, m_rightBorder, this.getHeight() - 1, m_paint);
+		canvas.drawLine(m_rightBorder, this.getHeight() - 1, 0, this.getHeight() - 1, m_paint);
+		canvas.drawLine(0, this.getHeight() - 1, 0, 0, m_paint);
 	}
 	
 	@Override

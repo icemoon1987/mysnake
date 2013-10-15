@@ -1,6 +1,7 @@
 package com.example.mysnake;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.app.Activity;
 import android.view.Menu;
 
@@ -9,6 +10,8 @@ public class MainActivity extends Activity {
 	SnakeCore m_snakeCore;
 	DisplayModule m_dispModule;
 	ControlModule m_ctrlModule;
+	
+	MessageHandler 
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,34 +22,31 @@ public class MainActivity extends Activity {
         m_snakeCore = new SnakeCore(m_dispModule);
         m_ctrlModule = new ControlModule(this, m_snakeCore);
         
-        
-        m_dispModule.InitDispBuffer(20, 20);
-        char[][] p = m_dispModule.GetDispBuf();
-        
-        
-        for(int i = 0 ; i < 20 ; ++i)
+        new Thread() 
         {
-        	for(int j = 0 ; j < 20 ; ++j)
+        	@Override
+        	public void run()
         	{
-        		p[i][j] = 0;
-        	}
-        }
-        
-        p[1][1] = 1;
-        p[2][2] = 2;
-        p[3][3] = 3;
-        p[15][10] = 1;
-        p[19][19] = 2;
+                m_dispModule.InitDispBuffer(35, 20);
+                char[][] p = m_dispModule.GetDispBuf();
                 
-        while(true)
-        {
-        	try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-        }
+                
+                for(int i = 0 ; i < 20 ; ++i)
+                {
+                	for(int j = 0 ; j < 20 ; ++j)
+                	{
+                		p[i][j] = 0;
+                	}
+                }
+                
+                p[1][1] = 1;
+                p[2][2] = 2;
+                p[3][3] = 3;
+                p[15][10] = 1;
+                p[19][19] = 2;
+        	}
+        }.start();
+        
     }
 
 
@@ -58,3 +58,9 @@ public class MainActivity extends Activity {
     }
     
 }
+
+class MessageHandler extends Handler
+{
+	
+}
+

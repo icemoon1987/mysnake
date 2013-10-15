@@ -8,17 +8,23 @@ public class SnakeDisplayAdapter implements DisplayInterface{
 	{
 		m_dispIf = dispIf;
 	}
-
+	
 	@Override
 	public char[][] GetDispBuf() {
 		// TODO Auto-generated method stub
-		return null;
+		return m_dispIf.GetDispBuf();
 	}
 
 	@Override
 	public void UpdateDisplay() {
 		// TODO Auto-generated method stub
 		m_dispIf.UpdateDisplay();
+	}
+
+	@Override
+	public void InitDispBuffer(int i, int j) {
+		// TODO Auto-generated method stub
+		m_dispIf.InitDispBuffer(i, j);
 	}
 	
 	
