@@ -17,8 +17,8 @@ public class DisplayModule extends View implements DisplayInterface {
 	
 	private int m_blockLen;
 	private int m_rightBorder;
-	private int m_row;
-	private int m_col;
+	private int m_iMax;
+	private int m_jMax;
 	
 	public DisplayModule(Context context, AttributeSet attrs)
 	{
@@ -27,24 +27,7 @@ public class DisplayModule extends View implements DisplayInterface {
 		m_paint = new Paint();
 	}
 	
-	public void InitDispBuffer(int i, int j)
-	{
-		m_row = j;
-		m_col = i;
-		
-		if(m_dispBuf == null)
-		{
-			m_dispBuf = new char[i][j];
-		}
-		else
-		{
-			
-		}
-		
-		m_blockLen = this.getHeight() / j;
-		m_rightBorder = m_blockLen * i;
-		
-	}
+
 
 	
 	private Rect GetRect(int i, int j)
@@ -68,8 +51,8 @@ public class DisplayModule extends View implements DisplayInterface {
 		int i = 0;
 		int j = 0;
 		
-		for (i = 0; i < m_col; ++i) {
-			for (j = 0; j < m_row; ++j) {
+		for (i = 0; i < m_jMax; ++i) {
+			for (j = 0; j < m_iMax; ++j) {
 				switch (dispBuf[i][j]) {
 				case 0: {
 					break;
@@ -133,5 +116,36 @@ public class DisplayModule extends View implements DisplayInterface {
 		this.invalidate();
 
 	}
+	
+	@Override
+	public void Init(int i, int j)
+	{
+		m_iMax = j;
+		m_jMax = i;
+		
+		if(m_dispBuf == null)
+		{
+			m_dispBuf = new char[i][j];
+		}
+		else
+		{
+			
+		}
+		
+		m_blockLen = this.getHeight() / j;
+		m_rightBorder = m_blockLen * i;
+		
+	}
 
+	@Override
+	public void ClearDispBuf() {
+		// TODO Auto-generated method stub
+		for(int i = 0 ; i < m_iMax ; ++i)
+		{
+			for(int j = 0 ; j < m_jMax ; ++j)
+			{
+				m_dispBuf[i][j] = 0; 
+			}
+		}
+	}
 }

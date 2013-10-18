@@ -1,49 +1,50 @@
 package com.example.mysnake;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.app.Activity;
+import android.os.Message;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
 
-	SnakeCore m_snakeCore;
-	DisplayModule m_dispModule;
+	GameCoreInterface m_gameCore;
+	DisplayInterface m_dispIf;
 	ControlModule m_ctrlModule;
 	
-	MessageHandler 
-	
+	Handler m_msgHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        m_dispModule = (DisplayModule)this.findViewById(R.id.DisplayModule);
-        m_snakeCore = new SnakeCore(m_dispModule);
-        m_ctrlModule = new ControlModule(this, m_snakeCore);
+        m_msgHandler = new Handler() {
+        	
+        	@Override
+        	public void handleMessage(Message msg)
+        	{
+        		if(msg.what == MsgTypes.UPDATE_DISPLAY.ordinal())
+        		{
+        			m_dispIf.UpdateDisplay();
+        		}
+        		
+        	}
+        };
         
+        m_dispIf = (DisplayInterface)this.findViewById(R.id.DisplayModule);
+        m_ctrlModule = new ControlModule(this, m_gameCore);
+
+        m_gameCore = new SnakeCore(new SnakeDisplayAdapter(m_dispIf, m_msgHandler),
+        							30, 
+        							20);
+
         new Thread() 
         {
         	@Override
         	public void run()
         	{
-                m_dispModule.InitDispBuffer(35, 20);
-                char[][] p = m_dispModule.GetDispBuf();
-                
-                
-                for(int i = 0 ; i < 20 ; ++i)
-                {
-                	for(int j = 0 ; j < 20 ; ++j)
-                	{
-                		p[i][j] = 0;
-                	}
-                }
-                
-                p[1][1] = 1;
-                p[2][2] = 2;
-                p[3][3] = 3;
-                p[15][10] = 1;
-                p[19][19] = 2;
+        		m_gameCore.run();
         	}
         }.start();
         
@@ -61,6 +62,5 @@ public class MainActivity extends Activity {
 
 class MessageHandler extends Handler
 {
-	
-}
 
+}
