@@ -1,6 +1,8 @@
 package com.example.mysnake;
 
 import java.util.ArrayList;
+import java.util.Random;
+
 
 public class SnakeCore implements GameCoreInterface {
 
@@ -38,14 +40,28 @@ public class SnakeCore implements GameCoreInterface {
 		m_dispAd.Init(m_iMax, m_jMax);
 		m_dispAd.UpdateDisplay();
 		
-		m_nodeList.add(new SnakeNode(1, 1, SnakeNodeStatus.SNAKE_HEAD));
-		m_nodeList.add(new SnakeNode(2, 2, SnakeNodeStatus.SNAKE_BODY));
-		m_nodeList.add(new SnakeNode(3, 3, SnakeNodeStatus.SNAKE_FOOD));
-		m_nodeList.add(new SnakeNode(4, 4, SnakeNodeStatus.SNAKE_BARRIER));
-		
-		m_dispAd.FillDispBuf(m_nodeList);
-		m_dispAd.UpdateDisplay();
+	}
 
+	
+	private void RandomGenerateFood()
+	{
+		Random rand = new Random();
+		
+		int i = rand.nextInt()%m_iMax;
+		int j = rand.nextInt()%m_jMax;
+		
+		
+		
+		
+	}
+	
+	private void GameStart()
+	{
+
+		
+		
+		
+		return;
 	}
 
 }

@@ -31,13 +31,10 @@ public class MainActivity extends Activity {
         		
         	}
         };
-        
-        m_dispIf = (DisplayInterface)this.findViewById(R.id.DisplayModule);
-        m_ctrlModule = new ControlModule(this, m_gameCore);
 
-        m_gameCore = new SnakeCore(new SnakeDisplayAdapter(m_dispIf, m_msgHandler),
-        							30, 
-        							20);
+        m_dispIf = (DisplayInterface)this.findViewById(R.id.DisplayModule);
+        m_gameCore = new SnakeCore(new SnakeDisplayAdapter(m_dispIf, m_msgHandler), 30, 20);
+        m_ctrlModule = new ControlModule(this, m_gameCore);
 
         new Thread() 
         {
