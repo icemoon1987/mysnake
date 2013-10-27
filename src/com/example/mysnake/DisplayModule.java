@@ -17,6 +17,7 @@ public class DisplayModule extends View implements DisplayInterface {
 	
 	private int m_blockLen;
 	private int m_rightBorder;
+	private int m_bottomBorder;
 	private int m_iMax;
 	private int m_jMax;
 	
@@ -51,8 +52,8 @@ public class DisplayModule extends View implements DisplayInterface {
 		int i = 0;
 		int j = 0;
 		
-		for (i = 0; i < m_jMax; ++i) {
-			for (j = 0; j < m_iMax; ++j) {
+		for (i = 0; i < m_iMax; ++i) {
+			for (j = 0; j < m_jMax; ++j) {
 				switch (dispBuf[i][j]) {
 				case 0: {
 					break;
@@ -87,9 +88,9 @@ public class DisplayModule extends View implements DisplayInterface {
 	{
 		m_paint.setColor(Color.BLACK);
 		canvas.drawLine(0, 0, m_rightBorder, 0, m_paint);
-		canvas.drawLine(m_rightBorder, 0, m_rightBorder, this.getHeight() - 1, m_paint);
-		canvas.drawLine(m_rightBorder, this.getHeight() - 1, 0, this.getHeight() - 1, m_paint);
-		canvas.drawLine(0, this.getHeight() - 1, 0, 0, m_paint);
+		canvas.drawLine(m_rightBorder, 0, m_rightBorder, m_bottomBorder - 1, m_paint);
+		canvas.drawLine(m_rightBorder, m_bottomBorder, 0, m_bottomBorder - 1, m_paint);
+		canvas.drawLine(0, m_bottomBorder - 1, 0, 0, m_paint);
 	}
 	
 	@Override
@@ -120,8 +121,8 @@ public class DisplayModule extends View implements DisplayInterface {
 	@Override
 	public void Init(int i, int j)
 	{
-		m_iMax = j;
-		m_jMax = i;
+		m_iMax = i;
+		m_jMax = j;
 		
 		if(m_dispBuf == null)
 		{
@@ -134,17 +135,17 @@ public class DisplayModule extends View implements DisplayInterface {
 		
 		m_blockLen = this.getHeight() / j;
 		m_rightBorder = m_blockLen * i;
+		m_bottomBorder = m_blockLen * j;
 		
 	}
 
 	@Override
 	public void ClearDispBuf() {
-		// TODO Auto-generated method stub
-		for(int i = 0 ; i < m_iMax ; ++i)
+		for(int i = 0 ; i < m_iMax; ++i)
 		{
-			for(int j = 0 ; j < m_jMax ; ++j)
+			for(int j = 0 ; j < m_jMax; ++j)
 			{
-				m_dispBuf[i][j] = 0; 
+				m_dispBuf[i][j] = 0;
 			}
 		}
 	}

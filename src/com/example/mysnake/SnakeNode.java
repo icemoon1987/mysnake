@@ -1,6 +1,5 @@
 package com.example.mysnake;
 
-import android.R.bool;
 
 public class SnakeNode {
 	public int i;
@@ -15,9 +14,9 @@ public class SnakeNode {
 	}
 	
 	
-	public boolean SamePosition(SnakeNode dst, SnakeNode src)
+	public boolean equ(SnakeNode dst)
 	{
-		if((dst.i == src.i) && (dst.j == src.j))
+		if((dst.i == this.i) && (dst.j == this.j))
 		{
 			return true;
 		}

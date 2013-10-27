@@ -18,7 +18,7 @@ public class SnakeDisplayAdapter implements DisplayInterface{
 		m_msgHandler = msgHandler;
 	}
 	
-	public void FillDispBuf(ArrayList<SnakeNode> nodeList)
+	public void FillDispBuf(ArrayList<SnakeNode> nodeList, SnakeNode food)
 	{
 		int listLen = nodeList.size();
 		SnakeNode node;
@@ -32,6 +32,11 @@ public class SnakeDisplayAdapter implements DisplayInterface{
 		{
 			node= nodeList.get(i);
 			m_dispIf.GetDispBuf()[node.i][node.j] = GetColor(node.s);
+		}
+		
+		if(food != null)
+		{
+			m_dispIf.GetDispBuf()[food.i][food.j] = GetColor(food.s);
 		}
 	}
 	

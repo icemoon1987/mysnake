@@ -56,8 +56,3 @@ public class MainActivity extends Activity {
     }
     
 }
-
-class MessageHandler extends Handler
-{
-
-}
