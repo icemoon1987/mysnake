@@ -28,6 +28,10 @@ public class MainActivity extends Activity {
         		{
         			m_dispIf.UpdateDisplay();
         		}
+        		else if(msg.what == MsgTypes.GAME_OVER.ordinal())
+        		{
+        			
+        		}
         		
         	}
         };

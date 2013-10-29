@@ -15,6 +15,8 @@ public class DisplayModule extends View implements DisplayInterface {
 	
 	char[][] m_dispBuf;
 	
+	boolean m_gameOver;
+	
 	private int m_blockLen;
 	private int m_rightBorder;
 	private int m_bottomBorder;
@@ -26,9 +28,19 @@ public class DisplayModule extends View implements DisplayInterface {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
 		m_paint = new Paint();
+		m_gameOver = false;
 	}
 	
+	public void setGameOver(boolean isGameOver)
+	{
+		m_gameOver = isGameOver;
+	}
 
+	private void DrawGameOver(Canvas canvas)
+	{
+		m_paint.setColor(Color.RED);
+		canvas.drawText("Game Over", 0, 0, m_paint);
+	}
 
 	
 	private Rect GetRect(int i, int j)
@@ -101,6 +113,11 @@ public class DisplayModule extends View implements DisplayInterface {
 		
 		DrawBorder(canvas);
 		DrawBlocks(m_dispBuf, canvas);
+		
+		if(m_gameOver)
+		{
+			DrawGameOver(canvas);
+		}
 	}
 	
 	@Override
