@@ -98,6 +98,13 @@ public class SnakeDisplayAdapter implements DisplayInterface{
 		
 		return color;
 	}
+
+	@Override
+	public void setGameOver(boolean isGameOver) {
+		// TODO Auto-generated method stub
+		m_dispIf.setGameOver(isGameOver);
+		m_msgHandler.sendEmptyMessage(MsgTypes.UPDATE_DISPLAY.ordinal());
+	}
 	
 
 }

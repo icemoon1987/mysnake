@@ -6,5 +6,6 @@ interface DisplayInterface {
 	public abstract void ClearDispBuf();
 	public abstract void Init(int i, int j);
 	public abstract void UpdateDisplay();
+	public abstract void setGameOver(boolean isGameOver);
 	
 }

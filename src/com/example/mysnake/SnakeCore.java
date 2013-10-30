@@ -222,13 +222,24 @@ public class SnakeCore implements GameCoreInterface {
 		m_food = generateRandomeFood(m_iMax, m_jMax);
 
 		m_dir = SnakeDir.DIR_RIGHT;
-	
+		
+		m_dispAd.setGameOver(false);
+		
 		m_dispAd.FillDispBuf(m_nodeList, m_food);
 		m_dispAd.UpdateDisplay();
 		
 		return;
 	}
 	
+	
+	public void GameOver()
+	{
+		/** Generate the Snake in a fixed position, generate a random position food and pause the game */
+		
+		m_dispAd.setGameOver(true);
+		
+		return;
+	}
 	
 }
 

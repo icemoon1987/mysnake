@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
         		}
         		else if(msg.what == MsgTypes.GAME_OVER.ordinal())
         		{
-        			
+        			m_dispIf.setGameOver(true);
         		}
         		
         	}

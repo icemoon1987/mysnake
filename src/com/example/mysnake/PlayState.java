@@ -4,7 +4,6 @@ public class PlayState implements SnakeStateInterface {
 
 	SnakeCore m_core;
 
-	SnakeCmd m_lastCmd;
 	
 	public PlayState(SnakeCore core)
 	{
@@ -13,7 +12,6 @@ public class PlayState implements SnakeStateInterface {
 	
 	@Override
 	public void ProcessCmd(SnakeCmd cmd) {
-		m_lastCmd = cmd;
 		
 		switch(cmd)
 		{

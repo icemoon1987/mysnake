@@ -39,7 +39,7 @@ public class DisplayModule extends View implements DisplayInterface {
 	private void DrawGameOver(Canvas canvas)
 	{
 		m_paint.setColor(Color.RED);
-		canvas.drawText("Game Over", 0, 0, m_paint);
+		canvas.drawText("Game Over", m_rightBorder/2, m_bottomBorder/2, m_paint);
 	}
 
 	
