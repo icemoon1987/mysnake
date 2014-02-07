@@ -8,7 +8,11 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-
+/**
+*
+*
+*
+*/
 public class DisplayModule extends View implements DisplayInterface {
 
 	Paint m_paint;
